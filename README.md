@@ -1,8 +1,6 @@
 # AZ-104 Azure Administration Labs
 
-This repository contains the five core hands‑on labs I built while developing real world Azure Administrator skills.
-
-These labs are organized around the five operational pillars used by professional cloud administrators and MSPs.
+This repository documents the five core Azure administration labs I built to establish a production ready cloud foundation. Each lab focuses on a major operational pillar used by enterprise cloud teams and MSPs, with hands‑on tasks, real world notes, and repeatable workflows.
 
 # 📂 Lab Structure
 - 01 Identity & Access Management  
