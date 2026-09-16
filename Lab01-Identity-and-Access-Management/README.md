@@ -151,4 +151,4 @@ az account management-group delete --name tremols-mg-core
 
 
 ## 📈 Next Lab
-[Lab 02 – Compute & Virtual Machines](https://github.com/JTremols-Cloud/Azure-AZ104-Labs/tree/5f50596f1b5aeac715145ba4ca38617f6cf16911/Lab02-Compute-Virtual-Machines)
+➡️ [Lab 02 – Compute & Virtual Machines](https://github.com/JTremols-Cloud/Azure-AZ104-Labs/tree/5f50596f1b5aeac715145ba4ca38617f6cf16911/Lab02-Compute-Virtual-Machines)
