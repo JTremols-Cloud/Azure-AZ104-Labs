@@ -9,7 +9,7 @@ Tremols Tech is preparing a flexible and scalable compute environment capable of
 - Web Apps for PaaS hosting
 - Container Instances for lightweight workloads
 - Container Apps for microservices and serverless containers
-This lab walks through the exact steps used by real cloud administrators and MSPs to deploy, scale, automate, and host applications across Azure’s compute ecosystem.
+##### This lab walks through the exact steps used by real cloud administrators and MSPs to deploy, scale, automate, and host applications across Azure’s compute ecosystem.
 
 ## 🔧 Part 1 – Virtual Machines & VM Scale Sets (IaaS Compute)
 This section focuses on Azure’s infrastructure‑based compute services.
@@ -60,8 +60,8 @@ New-AzVM `
  -Credential (Get-Credential)
 
 #### 6. Created a VM Using Azure CLI
-Used az vm create to deploy a Linux VM:
-- az vm create --name myCLIVM --resource-group az104-rg8 --image UbuntuLTS --admin-username localadmin --generate-ssh-keys
+Used CLI to deploy a Linux VM:
+###### az vm create --name myCLIVM --resource-group az104-rg8 --image UbuntuLTS --admin-username localadmin --generate-ssh-keys
 
 ## 📦 Part 2 – Infrastructure‑as‑Code: ARM Templates & Bicep
 This section focuses on automating compute deployments.
@@ -83,13 +83,13 @@ Then redeployed using Custom Deployment.
 
 #### 3. Deployed ARM Template via PowerShell
 ### PowerShell
-New-AzResourceGroupDeployment -ResourceGroupName az104-rg3 -TemplateFile template.json -TemplateParameterFile parameters.json
+###### New-AzResourceGroupDeployment -ResourceGroupName az104-rg3 -TemplateFile template.json -TemplateParameterFile parameters.json
 
 #### 4. Deployed ARM Template via CLI
-az deployment group create --resource-group az104-rg3 --template-file template.json --parameters parameters.json
+###### az deployment group create --resource-group az104-rg3 --template-file template.json --parameters parameters.json
 
 #### 5. Deployed a Bicep Template
-az deployment group create --resource-group az104-rg3 --template-file azuredeploydisk.bicep
+###### az deployment group create --resource-group az104-rg3 --template-file azuredeploydisk.bicep
 
 
 ## 🌐 Part 3 – Web Apps (App Service)
@@ -151,12 +151,12 @@ Created:
 Opened the ACA URL and confirmed the Hello World response.
 
 ## 📝 Notes & Observations
-Azure Compute spans IaaS, PaaS, and serverless containers.
-VMSS autoscaling is ideal for fluctuating workloads.
-ARM/Bicep templates ensure consistent deployments.
-Web Apps simplify hosting without managing servers.
-ACI is perfect for short‑lived container tasks.
-ACA provides serverless microservices without Kubernetes complexity.
+- Azure Compute spans IaaS, PaaS, and serverless containers.
+- VMSS autoscaling is ideal for fluctuating workloads.
+- ARM/Bicep templates ensure consistent deployments.
+- Web Apps simplify hosting without managing servers.
+- ACI is perfect for short‑lived container tasks.
+- ACA provides serverless microservices without Kubernetes complexity.
 
 ## 🎯 Why This Lab Matters
 Compute is the backbone of application hosting in Azure.
@@ -166,7 +166,7 @@ This lab establishes Tremols Tech’s compute foundation:
 - How infrastructure is automated
 - How applications are hosted
 - How containers run without servers
-Everything else — networking, storage, backup, analytics — depends on compute being deployed cleanly and consistently.
+Everything else (networking, storage, backup, analytics) depends on compute being deployed cleanly and consistently.
 
 ## 🧹 Cleanup
 Portal
@@ -177,14 +177,14 @@ Portal
 - Delete Container Instances
 
 ### PowerShell
-- Remove-AzResourceGroup -Name az104-rg8
-- Remove-AzResourceGroup -Name az104-rg3
-- Remove-AzResourceGroup -Name az104-rg9
+###### Remove-AzResourceGroup -Name az104-rg8
+###### Remove-AzResourceGroup -Name az104-rg3
+###### Remove-AzResourceGroup -Name az104-rg9
 
 ### CLI
-- az group delete --name az104-rg8
-- az group delete --name az104-rg3
-- az group delete --name az104-rg9
+###### az group delete --name az104-rg8
+###### az group delete --name az104-rg3
+###### az group delete --name az104-rg9
 
 ## 📈 Next Lab
 [➡️ Networking & Connectivity](https://github.com/JTremols-Cloud/Azure-AZ104-Labs/tree/106304e209dfa7b6a45a4be615253a480ba4ce9f/Lab03-Networking-and-Connectivity)
