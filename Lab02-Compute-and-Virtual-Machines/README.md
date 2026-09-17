@@ -61,7 +61,7 @@ New-AzVM `
 
 #### 6. Created a VM Using Azure CLI
 Used az vm create to deploy a Linux VM:
-az vm create --name myCLIVM --resource-group az104-rg8 --image UbuntuLTS --admin-username localadmin --generate-ssh-keys
+- az vm create --name myCLIVM --resource-group az104-rg8 --image UbuntuLTS --admin-username localadmin --generate-ssh-keys
 
 ## 📦 Part 2 – Infrastructure‑as‑Code: ARM Templates & Bicep
 This section focuses on automating compute deployments.
@@ -177,14 +177,14 @@ Portal
 - Delete Container Instances
 
 ### PowerShell
-Remove-AzResourceGroup -Name az104-rg8
-Remove-AzResourceGroup -Name az104-rg3
-Remove-AzResourceGroup -Name az104-rg9
+- Remove-AzResourceGroup -Name az104-rg8
+- Remove-AzResourceGroup -Name az104-rg3
+- Remove-AzResourceGroup -Name az104-rg9
 
 ### CLI
-az group delete --name az104-rg8
-az group delete --name az104-rg3
-az group delete --name az104-rg9
+- az group delete --name az104-rg8
+- az group delete --name az104-rg3
+- az group delete --name az104-rg9
 
 ## 📈 Next Lab
 [➡️ Networking & Connectivity](https://github.com/JTremols-Cloud/Azure-AZ104-Labs/tree/106304e209dfa7b6a45a4be615253a480ba4ce9f/Lab03-Networking-and-Connectivity)
