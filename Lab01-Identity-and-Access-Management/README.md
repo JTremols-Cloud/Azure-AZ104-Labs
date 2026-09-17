@@ -10,7 +10,7 @@ Tremols Tech is preparing a pre‑production Azure environment for internal engi
 - Governance enforcement
 - Resource protection
 
-This lab walks through the exact steps used by real cloud administrators and MSPs to secure and organize Azure environments.
+##### This lab walks through the exact steps used by real cloud administrators and MSPs to secure and organize Azure environments.
 
 
 ## 🔐 Part 1 - Identity: Users, Guests & Groups
@@ -106,9 +106,9 @@ This required:
 Creating a new storage account showed the tag automatically applied.
 
 #### 4. Configured Resource Locks
-I applied a Delete lock to the governance resource group.
-Attempting to delete the group resulted in a lock violation, confirming protection.
-Resource locks override RBAC and prevent accidental deletion or modification.
+- I applied a Delete lock to the governance resource group.
+- Attempting to delete the group resulted in a lock violation, confirming protection.
+- Resource locks override RBAC and prevent accidental deletion or modification.
 
 
 ## 📝 Notes & Observations
@@ -129,7 +129,7 @@ This lab establishes Tremols Tech’s operational foundation:
 - How resources are governed
 - How metadata is enforced
 - How accidental deletion is prevented
-Everything else — compute, networking, storage, analytics — depends on this layer being clean and well‑structured.
+Everything else (compute, networking, storage, analytics) depends on this layer being clean and well‑structured.
 
 
 ## 🧹 Cleanup
@@ -141,13 +141,13 @@ Portal
 
 ### PowerShell
 
-Remove-AzResourceGroup -Name tremols-rg-governance
-Remove-AzManagementGroup -GroupName tremols-mg-core
+###### Remove-AzResourceGroup -Name tremols-rg-governance
+###### Remove-AzManagementGroup -GroupName tremols-mg-core
 
 ### CLI
 
-az group delete --name tremols-rg-governance
-az account management-group delete --name tremols-mg-core
+###### az group delete --name tremols-rg-governance
+###### az account management-group delete --name tremols-mg-core
 
 
 ## 📈 Next Lab
