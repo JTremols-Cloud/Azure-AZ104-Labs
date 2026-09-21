@@ -11,7 +11,7 @@ Tremols Tech is building a flexible, scalable compute environment to support Cle
 - PaaS web hosting for application modernization
 - Serverless container hosting for lightweight workloads
 
-##### This lab mirrors the exact workflow used by real cloud administrators and MSPs when designing compute architectures for healthcare clients.
+###### This lab mirrors the exact workflow used by real cloud administrators and MSPs when designing compute architectures for healthcare clients.
 
 ## 🔧 Part 1 – Virtual Machines & VM Scale Sets (IaaS Compute)
 This section focuses on Azure’s infrastructure‑based compute services.
@@ -150,7 +150,8 @@ Configured:
 - A container app simulating a vendor microservice
 - Ingress enabled for controlled public access
 - Autoscaling rules ready for future configuration
-ACA is ideal for ClearView's appointment synchronization microservices, imaging metadata processors, and patient portal background services
+
+###### ACA is ideal for ClearView's appointment synchronization microservices, imaging metadata processors, and patient portal background services
 
 #### 4. Verified ACA Deployment
 Opened the ACA endpoint and confirmed the container responded correctly, validating ACA as a viable hosting platform for ClearView’s future microservices.
@@ -171,7 +172,8 @@ This lab establishes Tremols Tech’s compute foundation for ClearView Dental As
 - How infrastructure is automated
 - How applications are hosted
 - How containers run without servers
-Everything else (networking, storage, backup, analytics) depends on compute being deployed cleanly and consistently.
+- 
+###### Everything else (networking, storage, backup, analytics) depends on compute being deployed cleanly and consistently.
 
 ## 🧹 Cleanup
 Portal
