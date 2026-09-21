@@ -2,7 +2,7 @@
 
 This lab marks the beginning of Tremols Tech’s Azure Cloud Foundation project. As an early‑stage MSP contracted by ClearView Dental Associates, a mid‑size dental organization with multiple clinics and 180 employees, Tremols Tech is responsible for modernizing their IT operations by migrating identity, governance, and core workloads into Microsoft Azure.
 
-Before compute, networking, storage, or clinical applications can be deployed, Tremols Tech must establish a secure identity and governance baseline. This lab implements the core identity, RBAC, subscription organization, and policy enforcement controls required for a production‑ready landing zone.
+Before compute, networking, storage, or clinical applications can be deployed, Tremols Tech must establish a secure identity and governance baseline. This lab implements the core identity, RBAC, subscription organization, and policy enforcement controls required for a production‑ready landing zone. Every workload ClearView Dental Associates migrates — VMs, storage, networking, analytics — will inherit the identity and governance controls established in this phase.
 
 This is Phase 1 of a real MSP cloud adoption engagement.
 
@@ -26,7 +26,7 @@ This section focuses on core identity objects in Microsoft Entra ID.
 
 ### Scenario
 
-- ClearView Dental Associates is onboarding clinical staff, imaging technicians, and administrative users who need access to virtual machines and software. Tremols Tech must create internal identities, invite external collaborators, and organize access using security groups.
+- Tremols Tech is onboarding its internal cloud engineers and external dental software vendors into Azure so they can support ClearView Dental Associates during the migration.
 
 ### Tasks Completed
 
@@ -38,7 +38,7 @@ I added a new internal user representing a ClearView Regional Manager and config
 - Job title
 - Department
 - Usage location
-Identity metadata is essential for governance, automation, dynamic groups, and MSP directory.
+This account represents the first wave of ClearView identities being migrated into Azure AD.
 
 #### 2. Invited an External Guest User
 
@@ -145,6 +145,7 @@ Creating a new storage account showed the tag automatically applied.
 - Tagging is critical for cost management, automation, and operational clarity.
 - Remediation tasks bring existing resources into compliance.
 - Locks override user permissions — even owners cannot delete locked resources.
+- Identity and governance mistakes compound over time, establishing a clean baseline in Phase 1 prevents costly rework in later phases.
 
 
 
