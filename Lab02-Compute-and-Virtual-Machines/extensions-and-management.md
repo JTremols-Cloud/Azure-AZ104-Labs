@@ -1,28 +1,26 @@
 # Lab 02 – Compute and Virtual Machines
-This lab expands Tremols Tech’s Azure environment into the compute layer. It covers the full spectrum of Azure compute services used by modern MSPs, from traditional virtual machines to autoscaling VMSS, Infrastructure‑as‑Code deployments, PaaS web hosting, and serverless containers.
-
-This lab establishes Tremols Tech’s compute foundation, ensuring workloads can be deployed, scaled, automated, and hosted consistently across Azure.
+This lab expands Tremols Tech’s Azure environment into the compute layer. It covers the full spectrum of Azure compute services, from traditional virtual machines to modern PaaS and serverless container platforms. This lab establishes Tremols Tech’s compute foundation, combining VM deployment, scaling, automation, web hosting, and containerized workloads into a single unified workflow.
 
 ## 📘 Lab Overview
-Tremols Tech is building a flexible, scalable compute environment capable of supporting internal engineering workloads and future MSP client migrations. Before applications and data can be moved into Azure, Tremols Tech must establish:
-- Resilient virtual machines
-- Autoscaling VM Scale Sets
-- Infrastructure‑as‑Code deployment pipelines
-- PaaS web hosting for application modernization
-- Serverless container hosting for lightweight workloads
-
-##### This lab mirrors the exact workflow used by real cloud administrators and MSPs when designing compute architectures for clients.
+Tremols Tech is preparing a flexible and scalable compute environment capable of hosting:
+- Virtual machines for traditional workloads
+- VM Scale Sets for horizontal scaling
+- Infrastructure‑as‑Code for repeatable deployments
+- Web Apps for PaaS hosting
+- Container Instances for lightweight workloads
+- Container Apps for microservices and serverless containers
+##### This lab walks through the exact steps used by real cloud administrators and MSPs to deploy, scale, automate, and host applications across Azure’s compute ecosystem.
 
 ## 🔧 Part 1 – Virtual Machines & VM Scale Sets (IaaS Compute)
 This section focuses on Azure’s infrastructure‑based compute services.
 
 ### Scenario
-Tremols Tech needs resilient virtual machines for traditional workloads and wants to evaluate VM Scale Sets for horizontally scalable applications.
+Tremols Tech wants to deploy resilient virtual machines, explore VM scaling, and evaluate Virtual Machine Scale Sets for automated horizontal scaling.
 
 ### Tasks Completed
 
 #### 1. Deployed Zone‑Resilient Virtual Machines
-I deployed two Windows Server VMs across Availability Zones 1 and 2 to achieve 99.99% SLA.
+I deployed two Windows Server VMs across Availability Zones 1 and 2 to achieve the 99.99% SLA.
 Configured:
 - Premium SSD OS disk
 - No public inbound ports
@@ -30,12 +28,12 @@ Configured:
 - Zone redundancy
 
 #### 2. Scaled VM Compute & Storage
-To simulate workload growth, VM compute was scaled from D2s_v5 → D4s_v5, doubling CPU and memory.
-Storage operations included:
-- Adding a data disk
-- Detaching the disk
-- Converting Standard HDD → Standard SSD
-- Reattaching the disk
+I resized VM compute from D2s_v5 → D4s_v5, doubling CPU and memory.
+I also:
+- Added a data disk
+- Detached it
+- Converted it from Standard HDD → Standard SSD
+- Reattached it to the VM
 
 #### 3. Created a Virtual Machine Scale Set (VMSS)
 I deployed a VMSS across Zones 1, 2, and 3 with:
@@ -46,9 +44,9 @@ I deployed a VMSS across Zones 1, 2, and 3 with:
 - Autoscale‑ready configuration
 
 #### 4. Configured Autoscaling Rules
-Autoscaling rules were configured to simulate real MSP workload patterns:
-- Scale‑out: +50% instances when CPU > 70% for 10 minutes
-- Scale‑in: −20% instances when CPU < 30% for 10 minutes
+I created:
+- Scale‑out rule: Increase instances by 50% when CPU > 70% for 10 minutes
+- Scale‑in rule: Decrease instances by 20% when CPU < 30% for 10 minutes
 - Instance limits: Min 2, Max 10
 
 #### 5. Created a VM Using PowerShell
@@ -84,6 +82,7 @@ I updated:
 Then redeployed using Custom Deployment.
 
 #### 3. Deployed ARM Template via PowerShell
+### PowerShell
 ###### New-AzResourceGroupDeployment -ResourceGroupName az104-rg3 -TemplateFile template.json -TemplateParameterFile parameters.json
 
 #### 4. Deployed ARM Template via CLI
@@ -97,7 +96,7 @@ Then redeployed using Custom Deployment.
 This section focuses on Azure’s PaaS web hosting platform.
 
 ### Scenario
-Tremols Tech is preparing to migrate on‑premises PHP websites to Azure Web Apps. PaaS hosting reduces operational overhead and aligns with MSP modernization strategies.
+Tremols Tech wants to migrate on‑premises PHP websites to Azure Web Apps.
 
 ### Tasks Completed
 
@@ -112,7 +111,8 @@ Used deployment slots for safe testing before production swaps.
 
 #### 3. Configured GitHub Deployment
 Connected staging slot to:
-# https://github.com/(INPUT LINK HERE)
+- Code
+https://github.com/Azure-Samples/php-docs-hello-world
 
 #### 4. Swapped Staging → Production
 Performed a slot swap to promote tested code.
@@ -133,7 +133,8 @@ Tremols Tech wants lightweight container hosting without managing Kubernetes clu
 
 #### 1. Deployed Azure Container Instance (ACI)
 Used quickstart Docker image:
-- mcr.microsoft.com/azuredocs/aci-helloworld:latest
+- Code
+mcr.microsoft.com/azuredocs/aci-helloworld:latest
 Configured DNS label and verified public endpoint.
 
 #### 2. Reviewed Container Logs
