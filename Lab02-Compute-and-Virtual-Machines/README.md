@@ -38,7 +38,7 @@ Storage operations included:
 - Detaching the disk
 - Converting Standard HDD → Standard SSD
 - Reattaching the disk
-These operations simulate ClearView’s future imaging storage lifecycle.
+###### These operations simulate ClearView’s future imaging storage lifecycle.
 
 #### 3. Created a Virtual Machine Scale Set (VMSS)
 I deployed a VMSS across Zones 1, 2, and 3 with:
