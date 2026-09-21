@@ -2,15 +2,9 @@
 
 This lab marks the start of Tremols Tech’s Azure Cloud Foundation project. As an early‑stage MSP contracted by ClearView Dental Associates, a mid‑size dental organization, Tremols Tech is responsible for modernizing their IT operations by migrating identity, governance, and core workloads into Microsoft Azure.
 
-
-
-The dental organization operates multiple clinics, relies heavily on patient management software, imaging systems, and secure data workflows, and needs a compliant, well‑structured cloud foundation before any workloads can be migrated.
-
-
+The dental organization operates multiple clinics, relies heavily on patient management software, imaging systems, and secure data workflows, and needs a compliant, well structured cloud foundation before any workloads can be migrated.
 
 This lab establishes Tremols Tech’s identity, access, and governance baseline, forming Phase 1 of a real MSP cloud adoption engagement.
-
-
 
 ## 📘 Lab Overview
 
