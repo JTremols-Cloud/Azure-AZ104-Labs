@@ -16,7 +16,7 @@ ClearView Dental Associates is preparing to migrate practice management systems,
 - Azure Policy enforcement for tagging, compliance, and resource hygiene
 - Resource protection to prevent accidental deletion
 
-##### This lab walks through the exact steps MSPs take when onboarding healthcare organizations into Azure, especially those with HIPAA sensitive workloads. 
+###### This lab walks through the exact steps MSPs take when onboarding healthcare organizations into Azure, especially those with HIPAA sensitive workloads. 
 
 
 
@@ -26,7 +26,7 @@ This section focuses on core identity objects in Microsoft Entra ID.
 
 ### Scenario
 
-- Tremols Tech is onboarding its internal cloud engineers and external dental software vendors into Azure so they can support ClearView Dental Associates during the migration.
+Tremols Tech is onboarding its internal cloud engineers and external dental software vendors into Azure so they can support ClearView Dental Associates during the migration.
 
 ### Tasks Completed
 
@@ -38,7 +38,7 @@ I added a new internal user representing a ClearView Regional Manager and config
 - Job title
 - Department
 - Usage location
-This account represents the first wave of ClearView identities being migrated into Azure AD.
+###### This account represents the first wave of ClearView identities being migrated into Azure.
 
 #### 2. Invited an External Guest User
 
@@ -67,7 +67,7 @@ ClearView Dental Associates wants consistent access control and governance acros
 
 #### 1. Created a Management Group
 
-I created a management group (tremols-mg-core) to organize subscriptions under a single governance boundary.
+I created a management group (Clearview-MG-Core) named "ClearView Dental - Core Governance" to organize subscriptions under a centralized governance boundary for all current and future Azure workloads.
 
 Management groups enable:
 - Centralized RBAC
@@ -78,6 +78,7 @@ Management groups enable:
 #### 2. Assigned a Built-in Role
 
 I assigned the Virtual Machine Contributor role to the Tremols Tech Help Desk group at the management group scope.
+
 This role allows VM management without OS access or network/storage configuration, which is ideal for MSP support teams working with dental clinics.
 
 #### 3. Created a Custom RBAC Role
@@ -95,7 +96,7 @@ I used the Activity Log to confirm role creation and assignment events, which is
 
 
 
-## 🛡 Part 3 - Governance Enforcement: Azure Policy, Tagging \& Locks
+## 🛡 Part 3 - Governance Enforcement: Azure Policy, Tagging & Locks
 
 This section enforces governance using Azure Policy, tagging, and resource locks.
 
