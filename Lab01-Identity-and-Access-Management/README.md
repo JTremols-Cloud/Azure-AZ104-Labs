@@ -4,7 +4,7 @@ This lab marks the beginning of Tremols Tech’s Azure Cloud Foundation project.
 
 Before compute, networking, storage, or clinical applications can be deployed, Tremols Tech must establish a secure identity and governance baseline. This lab implements the core identity, RBAC, subscription organization, and policy enforcement controls required for a production‑ready landing zone. Every workload ClearView Dental Associates migrates — VMs, storage, networking, analytics — will inherit the identity and governance controls established in this phase.
 
-This is Phase 1 of a real MSP cloud adoption engagement.
+###### This is Phase 1 of a real MSP cloud adoption engagement.
 
 ## 📘 Lab Overview
 
@@ -38,6 +38,7 @@ I added a new internal user representing a ClearView Regional Manager and config
 - Job title
 - Department
 - Usage location
+
 ###### This account represents the first wave of ClearView identities being migrated into Azure.
 
 #### 2. Invited an External Guest User
@@ -51,7 +52,8 @@ I created a security group to centralize access for the Engineering department.
 - Assigned myself as owner
 - Added internal and external users
 - Reviewed static vs dynamic membership
-Dynamic membership requires P1/P2 licensing and is extremely useful for MSP environments. For this lab, assigned membership was used.
+
+###### Dynamic membership requires P1/P2 licensing and is extremely useful for MSP environments. For this lab, assigned membership was used.
 
 
 
@@ -108,7 +110,7 @@ During an internal audit, Tremols Tech discovered resources missing ownership, p
 
 #### 1. Applied Tags to a Resource Group
 
-I created a new resource group (tremols-rg-governance) and applied a CostCenter: 000 tag.
+I created a new resource group (ClearView-RG-Governance) and applied a CostCenter: 000 tag.
 
 Tags help with:
 - Cost management
@@ -160,9 +162,9 @@ This lab establishes Tremols Tech’s operational foundation for ClearView Denta
 - How resources are governed
 - How metadata is enforced
 - How accidental deletion is prevented
-Everything else (compute, networking, storage, analytics) depends on this layer being clean, secure, and well structured.
 
-###### This completes Phase 1 of Tremols Tech’s MSP cloud adoption project.
+###### Everything else (compute, networking, storage, analytics) depends on this layer being clean, secure, and well structured.
+
 
 ## 🧹 Cleanup
 
@@ -174,16 +176,14 @@ Portal
 * Remove policy assignments
 
 ### PowerShell
-
-###### Remove-AzResourceGroup -Name tremols-rg-governance
-
-###### Remove-AzManagementGroup -GroupName tremols-mg-core
+- Remove-AzResourceGroup -Name ClearView-RG-Governance
+- Remove-AzManagementGroup -GroupName ClearView-MG-Core
 
 ### CLI
+- az group delete --name ClearView-RG-Governance
+- az account management-group delete --name ClearView-MG-Core
 
-###### az group delete --name tremols-rg-governance
-
-###### az account management-group delete --name tremols-mg-core
+###### This completes Phase 1 of Tremols Tech’s MSP cloud adoption project.
 
 
 
